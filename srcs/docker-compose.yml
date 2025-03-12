@@ -1,0 +1,37 @@
+networks:
+  main:
+    driver: bridge
+
+volumes:
+  wp-db:
+  wp-sites:
+
+services:
+  nginx:
+    container_name: nginx
+    build: ./requirements/nginx/Dockerfile
+    ports: 
+      - "433:433"
+    networks:
+      - main
+    volumes:
+      - 
+    restart: always
+
+  wordpress:
+    container_name: wordpress
+    build: ./requirements/ordpress/Dockerfile
+    networks:
+      - main
+    volumes:
+      - 
+    restart: always
+
+  mariaDB:
+    container_name: mariaDB
+    build: ./requirements/mariadb/Dockerfile
+    networks:
+      - main
+    volumes:
+      - 
+    restart: always
