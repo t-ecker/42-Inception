@@ -7,10 +7,10 @@ all:	up
 build:
 	mkdir -p ~/data/wp-db
 	mkdir -p ~/data/wp-sites
-	$(DC) --build
+	$(DC) build
 
 up:	build
-	$(DC) up
+	$(DC) up -d
 
 down:
 	$(DC) down
