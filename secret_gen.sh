@@ -14,3 +14,6 @@ echo "user_password" > ./secrets/wp_password.txt
 echo "user@example.com" > ./secrets/wp_email.txt
 
 chmod 600 ./secrets/*
+
+touch .env
+echo -e "DOMAIN_NAME=tecker.42.fr\nDB_HOST=mariadb" > .env
