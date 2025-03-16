@@ -18,6 +18,8 @@ until mysqladmin ping -h "$DB_HOST" -u "$DB_USER" --password="$DB_PASSWORD" --si
 done
 echo "MariaDB is available."
 
+mkdir -p /run/php/
+
 if [ ! -f "/var/www/html/wp-config.php" ]; then
 	echo "Installing WP..."
 	mkdir -p /var/www/html/
@@ -56,4 +58,4 @@ else
 	echo "wordpress is already installed."
 fi
 
-php-fpm8.2 -F
+php-fpm7.4 -F
