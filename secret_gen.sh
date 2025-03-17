@@ -15,5 +15,5 @@ echo "user@example.com" > ./secrets/wp_email.txt
 
 chmod 600 ./secrets/*
 
-touch .env
-echo -e "DOMAIN_NAME=tecker.42.fr\nDB_HOST=mariadb" > .env
+touch ./srcs/.env
+echo -e "DOMAIN_NAME=tecker.42.fr\nDB_HOST=mariadb" > ./srcs/.env
