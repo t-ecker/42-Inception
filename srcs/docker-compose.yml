@@ -73,6 +73,21 @@ services:
     networks:
       - main
     restart: always
+  ftp:
+    container_name: ftp
+    build: ./requirements/bonus/ftp
+    volumes:
+        - wp-sites:/var/www/html
+    secrets:
+      - ftp_user
+      - ftp_password
+    ports:
+        - "21:21"
+        - "20:20"
+        - "50000-50100:50000-50100"
+    depends_on:
+        - wordpress
+    restart: always
 
 
 secrets:
@@ -94,3 +109,7 @@ secrets:
     file: ../secrets/wp_password.txt
   wp_email:
     file: ../secrets/wp_email.txt
+  ftp_user:
+    file: ../secrets/ftp_user.txt
+  ftp_password:
+    file: ../secrets/ftp_password.txt

@@ -6,6 +6,9 @@ echo "wordpress_db" > ./secrets/db_name.txt
 echo "db_user" > ./secrets/db_user.txt
 echo "db_password" > ./secrets/db_password.txt
 
+echo "ftp_user" > ./secrets/ftp_user.txt
+echo "ftp_password" > ./secrets/ftp_password.txt
+
 echo "admin" > ./secrets/wp_admin_user.txt
 echo "admin_password" > ./secrets/wp_admin_password.txt
 echo "admin@example.com" > ./secrets/wp_admin_email.txt
