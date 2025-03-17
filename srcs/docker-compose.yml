@@ -27,6 +27,8 @@ services:
     volumes:
       - wp-sites:/var/www/html
     restart: always
+    depends_on:
+      - wordpress
 
   wordpress:
     container_name: wordpress
@@ -49,6 +51,9 @@ services:
     volumes:
       - wp-sites:/var/www/html
     restart: always
+    depends_on:
+      - mariadb
+      - redis
 
   mariadb:
     container_name: mariadb
@@ -61,6 +66,12 @@ services:
       - main
     volumes:
       - wp-db:/var/lib/mysql
+    restart: always
+  redis:
+    container_name: redis
+    build: ./requirements/bonus/redis
+    networks:
+      - main
     restart: always
 
 
