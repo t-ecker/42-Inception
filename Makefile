@@ -7,6 +7,7 @@ all:	up
 build:
 	mkdir -p ~/data/wp-db
 	mkdir -p ~/data/wp-sites
+	mkdir -p ~/data/portainer
 	$(DC) build
 
 up:	build

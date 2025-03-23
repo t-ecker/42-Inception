@@ -16,6 +16,8 @@ echo "user" > ./secrets/wp_user.txt
 echo "user_password" > ./secrets/wp_password.txt
 echo "user@example.com" > ./secrets/wp_email.txt
 
+echo "tom" > ./secrets/portainer_admin_password.txt
+
 chmod 600 ./secrets/*
 
 touch ./srcs/.env
