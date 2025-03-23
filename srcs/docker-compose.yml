@@ -96,7 +96,14 @@ services:
     networks:
       - main
     restart: always
-
+  adminer:
+    container_name: adminer
+    build: ./requirements/bonus/adminer
+    ports:
+      - "8080:8080"
+    networks:
+      - main
+    restart: always
 
 secrets:
   db_name:
