@@ -25,6 +25,8 @@ basedir                 = /usr
 # localhost which is more compatible and is not less secure.
 bind-address            = 0.0.0.0
 
+#needed for listening to all incoming connections in the network (like this it is accessible by other containers)
+
 #
 # * Fine Tuning
 #

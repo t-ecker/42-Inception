@@ -67,4 +67,4 @@ else
 	echo "wordpress is already installed."
 fi
 
-php-fpm7.4 -F
+php-fpm7.4 -F #-f is starting it in the foreground

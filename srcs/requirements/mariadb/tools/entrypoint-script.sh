@@ -14,7 +14,7 @@ if [ ! -d "/var/lib/mysql/mysql" ]; then
     echo "Database directory not found. Creating..."
     mkdir -p /var/lib/mysql
     chown -R mysql:mysql /var/lib/mysql
-	mysql_install_db --user=mysql --datadir=/var/lib/mysql
+	mysql_install_db --user=mysql --datadir=/var/lib/mysql #sets up the database system
 fi
 
 # Check if we need to initialize the database
@@ -33,6 +33,7 @@ if [ ! -f "$INIT_MARK_FILE" ]; then
     echo "background mariadb started"
     
     # Create db, user and set permissions
+    #use of heredoc. put everything between the EOF into the mysql client as input. Uses root user
     mysql -u root <<EOF
 CREATE DATABASE IF NOT EXISTS ${DB_NAME} CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 CREATE USER IF NOT EXISTS '${DB_USER}'@'%' IDENTIFIED BY '${DB_PASSWORD}';
