@@ -8,6 +8,7 @@ echo "db_password" > ./secrets/db_password.txt
 
 echo "ftp_user" > ./secrets/ftp_user.txt
 echo "ftp_password" > ./secrets/ftp_password.txt
+echo "tom" > ./secrets/portainer_admin_password.txt
 
 echo "admin" > ./secrets/wp_admin_user.txt
 echo "admin_password" > ./secrets/wp_admin_password.txt
@@ -16,7 +17,6 @@ echo "user" > ./secrets/wp_user.txt
 echo "user_password" > ./secrets/wp_password.txt
 echo "user@example.com" > ./secrets/wp_email.txt
 
-echo "tom" > ./secrets/portainer_admin_password.txt
 
 chmod 600 ./secrets/*
 
