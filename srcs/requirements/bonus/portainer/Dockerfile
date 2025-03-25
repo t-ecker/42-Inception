@@ -1,4 +1,4 @@
-FROM debian:bullseye
+FROM debian:11
 
 RUN apt-get update && apt-get install -y \
     curl \
@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
 
 #download portainer tar
 RUN if [ ! -f "/portainer" ]; then \
-    curl -L https://github.com/portainer/portainer/releases/download/2.18.1/portainer-2.18.1-linux-arm64.tar.gz -o portainer.tar.gz; \
+    curl -L https://github.com/portainer/portainer/releases/download/2.16.2/portainer-2.16.2-linux-amd64.tar.gz -o portainer.tar.gz; \
     fi
 
 COPY ./tools/entrypoint-script.sh /entrypoint-script.sh
