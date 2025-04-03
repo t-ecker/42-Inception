@@ -64,13 +64,11 @@ https://localhost
 https://localhost/wp-admin
 ```
 
-
-- Access **Portainer** at:
+- Access **Static Website** at:
 
 ```plaintext
-http://localhost:8082
+http://localhost:8080
 ```
-
 
 - Access **Adminer** at:
 
@@ -78,12 +76,12 @@ http://localhost:8082
 http://localhost:8081
 ```
 
-
-- Access **Static Website** at:
+- Access **Portainer** at:
 
 ```plaintext
-http://localhost:8080
+http://localhost:8082
 ```
+
 
 
 
