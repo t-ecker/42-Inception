@@ -33,7 +33,7 @@
 ### 1️⃣ Clone the Repository
 
 ```shellscript
-git clone https://github.com/your-username/inception.git
+git clone https://github.com/t-ecker/inception.git
 cd inception
 ```
 
