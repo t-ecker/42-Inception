@@ -11,10 +11,12 @@ if ! id "$FTP_USER" &>/dev/null; then
     useradd -m "$FTP_USER"
     echo "$FTP_USER:$FTP_PASS" | chpasswd
 
-    chown -R "$FTP_USER:$FTP_USER" /var/www/html
+    usermod -aG www-data "$FTP_USER"
 else
     echo "User $FTP_USER already exists, skipping creation."
 fi
+
+chmod -R 775 /var/www/html
 
 echo "Starting vsftpd..."
 exec /usr/sbin/vsftpd /etc/vsftpd.conf
